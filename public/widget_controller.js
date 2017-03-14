@@ -4,7 +4,8 @@ $('document').ready(function(){
   // })
     $('#markdown-text').keyup(function(){
       var input = $(this).val()
-      var transformedInput = transform(input)
+      var transformable = new Widget()
+      var transformedInput = transformable.transform(input)
 
       $('#preview').html(transformedInput)
       })
